@@ -9,6 +9,7 @@ pipeline {
 
         stage('Create the NGINX namespace') {
             steps{
+                sh 'kubectl delete namespace nginx-app-namespace'
                 sh 'kubectl create namespace nginx-app-namespace'
                 }
         }
