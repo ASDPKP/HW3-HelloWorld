@@ -18,8 +18,8 @@ pipeline {
 
         stage('Building the Docker Image') {
             steps {
-                image = docker.build("asdpkp/nginx-webapp")
-                docker.push("latest")
+                dockerImage = docker.build("asdpkp/nginx-webapp")
+                dockerImage.push("latest")
             }
         }
 
