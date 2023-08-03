@@ -36,7 +36,7 @@ pipeline {
         stage('Deploying the WebApp to the cluster') {
             steps{
                 //sh 'kubectl create namespace nginx-app-namespace'
-                sh 'kubectl apply -f webapp-deployment.yaml -n' //nginx-app-namespace
+                sh 'kubectl apply -f webapp-deployment.yaml'// -n nginx-app-namespace
                 }
         }
     }
