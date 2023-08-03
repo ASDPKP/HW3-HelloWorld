@@ -30,7 +30,8 @@ spec:
     selector:
         app: nginx-hello-world
     ports:
-    - protocol: "TCP"
+    - name: http
+      protocol: "TCP"
       port: 8080
       targetPort: 80
           
