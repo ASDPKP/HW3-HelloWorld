@@ -14,8 +14,8 @@ spec:
                 app: nginx-hello-world
         spec:
             containers:
-            - name: nginx
-              image: asdpkp/nginx-webapp:latest
+            - name: nginx-cont
+              image: asdpkp/nginx-webapp
               ports:
                   - containerPort: 80
 
@@ -30,9 +30,9 @@ spec:
     selector:
         app: nginx-hello-world
     ports:
-    -   protocol: TCP
-        port: 80
-        targetPort: 8080
+        -   protocol: "TCP"
+            port: 80
+            targetPort: 80
           
     type: LoadBalancer
     #loadBalancerIP: 34.86.147.13
