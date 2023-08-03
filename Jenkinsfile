@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        */stage('Cleaning the cluster') {
+        /*stage('Cleaning the cluster') {
             steps{
                 sh 'kubectl delete namespace nginx-app-namespace'
                 sh 'kubectl delete deployment nginx-hello-world -n nginx-app-namespace'
