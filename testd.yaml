@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: nginx-hello-world
-    #namespace: nginx
+    namespace: nginx-app-namespace
 spec:
-    replicas: 2
+    replicas: 1
     selector:
         matchLabels:
             app: nginx-hello-world
@@ -24,8 +24,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-    name: nginx-svc
-    #namespace: nginx
+    name: nginx-hello-worlds-svc
+    namespace: nginx-app-namespace
 spec:
     selector:
         app: nginx-hello-world
@@ -34,4 +34,4 @@ spec:
       port: 80
       targetPort: 80
           
-    type: NodePort
+    type: LoadBalancer
