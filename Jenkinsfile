@@ -1,10 +1,26 @@
 pipeline {
     agent any
+    environment {
+        docker_creds = credentials('docker-credentials')
+    }
     stages {
         stage('Hello') {
             steps{
                 echo 'Hello!!!'
                 }
+        }
+
+        stage('Loging into Docker') {
+            steps {
+            sh "docker login -u ${docker_creds_USR}$ -p ${docker_creds.PSW}"
+            }
+        }
+
+        stage('Building the Docker Image') {
+            steps {
+                image = docker.build("asdpkp/nginx-webapp")
+                docker.push("latest")
+            }
         }
 
         stage('Cleaning the cluster') {

@@ -15,7 +15,7 @@ spec:
         spec:
             containers:
             - name: nginx
-              image: asdpkp/webapp:v2
+              image: asdpkp/nginx-webapp:latest
               ports:
                   - containerPort: 80
 
@@ -34,4 +34,4 @@ spec:
       port: 80
       targetPort: 80
           
-    type: LoadBalancer
+    type: NodePort
