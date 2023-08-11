@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-webapp-ingress
+  annotations:
+    kubernetes.io/ingress.regional-static-ip-name: "test-ip"
   labels:
     name: nginx-webapp-ingress
 spec:
