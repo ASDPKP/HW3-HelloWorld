@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: nginx-webapp-ingress
   annotations:
-    kubernetes.io/ingress.regional-static-ip-name: "test-ip"
+    kubernetes.io/ingress.global-static-ip-name: "hw3-ip"
   labels:
     name: nginx-webapp-ingress
 spec:
