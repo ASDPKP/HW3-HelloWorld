@@ -11,7 +11,7 @@ spec:
         service:
             name: myapp-svc
             port:
-                number: 8080
+                number: 80
     rules:
         - host: qwe.atnk-studentsurvey.com
           http:
