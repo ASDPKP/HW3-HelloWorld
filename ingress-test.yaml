@@ -13,8 +13,8 @@ spec:
       port:
         number: 8080
   rules:
-    #- host: app.atnk-studentsurvey.com
-    - http:
+    - host: app.atnk-studentsurvey.com
+      http:
         paths:
         - path: /
           pathType: Prefix
