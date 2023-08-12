@@ -23,7 +23,7 @@ spec:
               name: nginx-hello-worlds-svc
               port:
                 number: 80
-        - path: /survey/*
+        - path: /survey*
           pathType: Prefix
           backend:
             service:
