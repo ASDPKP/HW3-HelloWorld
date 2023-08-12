@@ -7,6 +7,11 @@ metadata:
   labels:
     name: nginx-webapp-ingress
 spec:
+  defaultBackend:
+    service:
+      name: nginx-hello-worlds-svc
+      port:
+        number: 8080
   rules:
     #- host: app.atnk-studentsurvey.com
     - http:
