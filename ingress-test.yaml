@@ -5,14 +5,14 @@ metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "ip-hw3"
   labels:
-    name: nginx-webapp-ingress
+    name: nginx-webapp-ingress-test
 spec:
   rules:
     - host: app.atnk-studentsurvey.com
       http:
         paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
           backend:
             service:
               name: nginx-hello-worlds-svc
