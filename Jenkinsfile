@@ -39,7 +39,7 @@ pipeline {
                 //sh 'kubectl create namespace nginx-app-namespace'
                 sh 'kubectl apply -f webapp-deployment.yaml -n nginx-app-namespace'
                 sh 'kubectl apply -f ingress-test.yaml -n nginx-app-namespace'
-                sh 'kubectl apply -f ingress.yaml -n myapp-namespace'
+                sh 'kubectl apply -f ingress.yaml -n nginx-app-namespace'
                 }
         }
     }
