@@ -11,7 +11,7 @@ spec:
     service:
       name: nginx-hello-worlds-svc
       port:
-        number: 8080
+        number: 80
   rules:
     - host: app.atnk-studentsurvey.com
       http:
