@@ -11,14 +11,14 @@ spec:
     - host: app.atnk-studentsurvey.com
       http:
         paths:
-        - path: /webapp
+        - path: /
           pathType: ImplementationSpecific
           backend:
             service:
               name: nginx-hello-worlds-svc
               port:
                 number: 80
-        - path: /
+        - path: /survey
           pathType: Prefix
           backend:
             service:
