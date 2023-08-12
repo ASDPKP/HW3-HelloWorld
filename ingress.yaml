@@ -13,10 +13,10 @@ spec:
             port:
                 number: 8080
     rules:
-        - host: app.atnk-studentsurvey.com
+        - host: qwe.atnk-studentsurvey.com
           http:
               paths:
-              - path: /survey
+              - path: /
                 pathType: Prefix
                 backend:
                   service:
