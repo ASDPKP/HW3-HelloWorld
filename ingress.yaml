@@ -9,7 +9,7 @@ metadata:
 spec:
     defaultBackend:
         service:
-            name: nginx-hello-worlds-svc
+            name: myapp-svc
             port:
                 number: 80
     rules:
@@ -20,6 +20,6 @@ spec:
                 pathType: Prefix
                 backend:
                   service:
-                    name: nginx-hello-worlds-svc
+                      name: myapp-svc
                   port:
                       number: 80
