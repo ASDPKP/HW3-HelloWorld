@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-webapp-ingress
+  name: nginx-webapp-ingress-test
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "ip-hw3"
   labels:
