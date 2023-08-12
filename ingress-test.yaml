@@ -29,4 +29,4 @@ spec:
             service:
               name: myapp-svc
               port:
-                number: 8080
+                number: 81
