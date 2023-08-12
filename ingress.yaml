@@ -11,15 +11,15 @@ spec:
         service:
             name: myapp-svc
             port:
-                number: 80
+                number: 8080
     rules:
-        - host: qwe.atnk-studentsurvey.com
+        - host: app.atnk-studentsurvey.com
           http:
               paths:
-              - path: /
+              - path: /survey
                 pathType: Prefix
                 backend:
                   service:
                       name: myapp-svc
                       port:
-                          number: 80
+                          number: 8080
