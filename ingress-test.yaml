@@ -11,7 +11,7 @@ spec:
     - host: app.atnk-studentsurvey.com
       http:
         paths:
-        - path: /webapp
+        - path: /
           pathType: Prefix
           backend:
             service:
