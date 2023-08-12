@@ -4,6 +4,7 @@ metadata:
   name: nginx-webapp-ingress
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "ip-hw3"
+    cloud.google.com/neg: '{"ingress": true}'
   labels:
     name: nginx-webapp-ingress
 spec:
@@ -11,14 +12,14 @@ spec:
     - host: app.atnk-studentsurvey.com
       http:
         paths:
-        - path: /qwe
+        - path: /
           pathType: ImplementationSpecific
           backend:
             service:
               name: nginx-hello-worlds-svc
               port:
                 number: 80
-        - path: /
+        - path: /webapp
           pathType: Prefix
           backend:
             service:
