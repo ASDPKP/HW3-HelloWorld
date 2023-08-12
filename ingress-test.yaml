@@ -9,7 +9,7 @@ metadata:
 spec:
   rules:
     #- host: app.atnk-studentsurvey.com
-      http:
+    - http:
         paths:
         - path: /
           pathType: Prefix
